@@ -82,3 +82,26 @@ function brush7(x, y, px, py, lineWidth) {
   line(width/2+((width/2)-px),py,width/2+((width/2)-x),y);
   return false;
 }
+
+// my brush
+function brush8(x, y, px, py, lineWidth,red, green, blue) {
+  strokeWeight(lineWidth);
+
+
+
+
+    //line(x,  y, px + random(-500,500),  py + random(-500,500));
+var a = 0.0;
+var inc = TWO_PI/25.0;
+for (var i = 0; i < 50; i++) {
+  //fill(red, green, blue, 255);
+  ellipse(x + ((i + random(constrain(px,0,10))) + sin(a)),y + ((i + random(constrain(px,0,10))) + sin(a)),px,py);
+  //line(i*x, y, i*px, y+sin(a)*py);
+  a = a + inc;
+}
+
+
+
+  return false;
+
+}
