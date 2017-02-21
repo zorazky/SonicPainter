@@ -39,10 +39,11 @@ function mouseDragged() {
   //brush1(mouseX, mouseY,speed, speed,lineWidth);
   //brush2(mouseX, mouseY,speed, speed,lineWidth);
   //brush3(mouseX, mouseY,speed, speed,lineWidth);
-  brush4(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
+  //brush4(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
   //brush5(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
   //brush6(mouseX, mouseY,speed, speed,lineWidth);
   //brush7(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
+  brush8(pmouseX, pmouseY, speed, speed,lineWidth,red,green,blue);
 
   return false;
 }
