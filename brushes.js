@@ -87,21 +87,25 @@ function brush7(x, y, px, py, lineWidth) {
 function brush8(x, y, px, py, lineWidth,red, green, blue) {
   strokeWeight(lineWidth);
 
-
-
-
     //line(x,  y, px + random(-500,500),  py + random(-500,500));
-var a = 0.0;
-var inc = TWO_PI/25.0;
-for (var i = 0; i < 50; i++) {
-  //fill(red, green, blue, 255);
-  ellipse(x + ((i + random(constrain(px,0,10))) + sin(a)),y + ((i + random(constrain(px,0,10))) + sin(a)),px,py);
-  //line(i*x, y, i*px, y+sin(a)*py);
-  a = a + inc;
-}
-
-
+    var a = 0.0;
+    var inc = TWO_PI/25.0;
+    for (var i = 0; i < 50; i++) {
+      //fill(red, green, blue, 255);
+      ellipse(x + ((i + random(constrain(px,0,10))) + sin(a)),y + ((i + random(constrain(px,0,10))) + sin(a)),px,py);
+      a = a + inc;
+    }
 
   return false;
 
+}
+
+
+function brush9(x, y, speed, lineWidth) {
+  strokeWeight(lineWidth);
+
+  for (var i = 0; i < speed * .01; i++) {
+    ellipse(x + random(-100,100), y + random(-100,100), speed * .8, speed * .8);
+  }
+  return false;
 }
