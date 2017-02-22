@@ -111,5 +111,5 @@ function brush9(x, y, speed, lineWidth) {
 
 
 
-  
+
 }
