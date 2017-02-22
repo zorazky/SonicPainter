@@ -1,3 +1,5 @@
+var selectedBrush = 'sbrush1';
+
 function setup() {
   createCanvas(windowWidth,windowHeight);
   background(0);
@@ -34,6 +36,38 @@ function mouseDragged() {
 
   ///////////// BRUSHES
 
+  switch (selectedBrush) {
+  case "sbrush1":
+    brush1(mouseX, mouseY,speed, speed,lineWidth);
+    break;
+  case "sbrush2":
+    brush2(mouseX, mouseY,speed, speed,lineWidth);
+    break;
+  case "sbrush3":
+    brush3(mouseX, mouseY,speed, speed,lineWidth);
+    break;
+  case "sbrush4":
+    brush4(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
+    break;
+  case "sbrush5":
+    brush5(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
+    break;
+  case "sbrush6":
+    brush6(mouseX, mouseY,speed, speed,lineWidth);
+    break;
+  case "sbrush7":
+    brush7(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
+    break;
+  case "sbrush8":
+    brush8(pmouseX, pmouseY, speed, speed,lineWidth,red,green,blue);
+    break;
+  case "sbrush9":
+    brush9(pmouseX, pmouseY, speed, lineWidth);
+  default:
+    brush1(mouseX, mouseY,speed, speed,lineWidth);
+
+  }
+
   //line(mouseX, mouseY, pmouseX, pmouseY);
   //ellipse(mouseX, mouseY, 5, 5);
   //brush1(mouseX, mouseY,speed, speed,lineWidth);
@@ -44,7 +78,7 @@ function mouseDragged() {
   //brush6(mouseX, mouseY,speed, speed,lineWidth);
   //brush7(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
   //brush8(pmouseX, pmouseY, speed, speed,lineWidth,red,green,blue);
-  brush9(pmouseX, pmouseY, speed, lineWidth);
+  //brush9(pmouseX, pmouseY, speed, lineWidth);
 
   return false;
 }
