@@ -1,5 +1,6 @@
 var FizzyText = function() {
   this.message = 'dat.gui';
+  this.alpha = 5;
 
 };
 
@@ -11,6 +12,13 @@ window.onload = function() {
     selectedBrush = newValue;
     console.log("Value changed to:  ", selectedBrush);
   });
+
+  gui.add(text, 'alpha', 0, 50).onChange(function(newValue) {
+    alpha = newValue;
+    console.log("Value changed to:  ", newValue);
+  });
+
+
 
 
 

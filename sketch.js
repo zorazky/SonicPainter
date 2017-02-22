@@ -1,10 +1,14 @@
 var selectedBrush = 'sbrush1';
+//calculate alpha using mouse speed
+//var alpha = map(speed, 0, 20, 0, 3);
+var alpha = 5;
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
   background(0);
   rectMode(CENTER);
   frameRate(30);
+  alpha = 5;
 
 }
 
@@ -21,14 +25,14 @@ function mouseDragged() {
   var green = dist(mouseX,mouseY,width/2,height/2);
   // calculate distance from mouse movement
   var speed = dist(pmouseX, pmouseY, mouseX,mouseY);
-  //calculate alpha using mouse speed
-  var alpha = map(speed, 0, 20, 0, 3);
+
   //change line width based on mouse speed, less speed more weight
   var lineWidth = map(speed, 0, 10, 5, 0);
   //lineWidth = constrain(lineWidth, 0, 10);
 
   noStroke();
   fill(0, alpha);
+  console.log(alpha);
   rect(width/2, height/2, width, height);
 
   stroke(red, green, blue, 255);
