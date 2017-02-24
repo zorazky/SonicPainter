@@ -113,3 +113,17 @@ function brush9(x, y, speed, lineWidth) {
 
 
 }
+
+function brush10(x, y, speed, lineWidth) {
+  strokeWeight(lineWidth);
+
+  for (var i = 0; i < speed * .01; i++) {
+    ellipse(x + random(-100,100), y + random(-100,100), speed * .8, speed * .8);
+    ellipse(width/2+((width/2)-(x + random(-100,100))),(y + random(-100,100)),speed * .8,speed * .8);
+  }
+  return false;
+
+
+
+
+}

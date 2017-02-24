@@ -67,6 +67,9 @@ function mouseDragged() {
     break;
   case "sbrush9":
     brush9(pmouseX, pmouseY, speed, lineWidth);
+    break;
+  case "sbrush10":
+    brush10(pmouseX, pmouseY, speed, lineWidth);
   default:
     brush1(mouseX, mouseY,speed, speed,lineWidth);
 
