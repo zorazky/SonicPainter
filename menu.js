@@ -1,6 +1,11 @@
 var FizzyText = function() {
   this.message = 'dat.gui';
   this.alpha = 5;
+  this.saving = function() {
+
+    save('myCanvas.jpg');
+
+  };
 
 };
 
@@ -17,6 +22,8 @@ window.onload = function() {
     alpha = newValue;
     console.log("Value changed to:  ", newValue);
   });
+
+  gui.add(text, 'saving');
 
 
 
